@@ -276,7 +276,7 @@ function get_sfid() {
 		get_bloginfo('rss2_url'),
 		get_site_url()
 	);
-	$response_state;
+	$response_state='';
 	foreach($site_urls as $url) {
 		if (empty($url)) continue;
 		$response = wp_remote_GET(SE_ZEMANTA_PREFS_URL . '?url=' . urlencode($url));
